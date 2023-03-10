@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUTO_MANUAL</title>
+    <style>
+         @media screen and (max-width: 600px) {
+            .col-4,
+            .col-7,
+            input[type=submit],
+            table,
+            .container-table {
+            width: 98%;
+            margin-top: 0;
+            }
+        }
+        *{
+            box-sizing: border-box;
+        }
+         .container {
+        border-radius: 0px;
+        background-color: #c4c7c2;
+        padding: 20px;
+        margin: 1.5%;
+        font-size: larger;
+        }
+        .tab {
+        margin: 1.5%;
+        overflow: hidden;
+        background-color: #505652;
+        color: #333140;
+        }
+        .tablinks {
+            background-color: inherit;
+            color: #ffffff;
+            float: left;
+            cursor: pointer;
+            padding: 15px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+            font-weight: 600;
+            border-style: none;
+        }
+        .tablinks:hover {
+            border-bottom: 3px solid #373d3e;
+            color: #333140;
+            font-weight: 600;
+            background-color: #ffffff;
+        }
+        .tablinks.active {
+            color: #333140;
+            border-bottom: 5px solid #373d3e;
+            font-weight: 700;
+        }
+        .row{
+        margin-top: 20px;
+        }
+        .col-4 {
+        width: 25%;
+        margin-top: 6px;
+        }
+        .col-7 {
+        width: 100%;
+        margin-top: 6px;
+        }
+        input[type=text],
+        input[type=number] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #eff1f5;
+        border-radius: 4px;
+        resize: vertical;
+        font-size: medium;
+        }
+        input[type=submit] {
+            background-color: #505652;
+            height: 40px;
+            width: 80px;
+            border: none;
+            color: #ffffff;
+            font-weight: 700;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+            font-size: medium;
+            margin: 5px;
+        }
+        input[type=submit]:hover {
+            background-color: #777A75;
+            color: #ffffff;
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+    <form>
+
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'Auto')">Auto  Settings</button>
+                <button class="tablinks" onclick="openCity(event, 'Ethernet')">Manual Settings</button>
+            </div>
+            
+            <div id="auto" class="tabcontent">
+                <div class="container">
+                  <form method='get' action=''>
+                    <div class="row">
+                      <div class="col-4">
+                        <label for="on-time">ON Time :</label>
+                      </div>
+                      <div class="col-7">
+                        <input type="text" id="on-time" name="on-time" placeholder="ON Time....">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-4">
+                        <label for="off-time">OFF Time :</label>
+                      </div>
+                      <div class="col-7">
+                        <input type="text" id="off-time" name="Password" placeholder="OFF Time">
+                      </div>
+                    </div>
+                    <div class="row">
+                      <input type="submit" class="submit" value="Submit">
+                    </div>
+                  </form>
+                </div>
+            </div>
+                <div id="manual" class="tabcontent">
+                    <div class="container">
+                      <form method='get' action=''>
+                        <div class="row">
+                          <div class="col-4">
+                            <label for="sensor-1">Sensor 1 :</label>
+                          </div>
+                          <div class="col-7">
+                            <input type="number" id="sensor_1" name="sensor 1" placeholder="Sensor 1....">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-4">
+                            <label for="sensor-2">Sensor 2 :</label>
+                          </div>
+                          <div class="col-7">
+                            <input type="number" id="sensor_2" name="Password" placeholder="Sensor 2....">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <input type="submit" class="submit" value="Submit">
+                        </div>
+                      </form>
+                    </div>  
+                </div>
+    </form>
+    
+</body>
+</html>

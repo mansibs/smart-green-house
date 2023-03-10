@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API</title>
+    <style>
+         @media screen and (max-width: 600px) {
+            .col-4,
+            .col-7,
+            input[type=submit],
+            table {
+            width: 98%;
+            margin-top: 0;
+            }
+        }
+        *{
+            box-sizing: border-box;
+        }
+        .container {
+        border-radius: 0px;
+        background-color: #c4c7c2;
+        padding: 20px;
+        margin: 1.5%;
+        font-size: larger;
+        }
+        .row{
+        margin-top: 20px;
+        }
+        .col-4 {
+        width: 25%;
+        margin-top: 6px;
+        }
+        .col-7 {
+        width: 100%;
+        margin-top: 6px;
+        }
+        input[type=text] {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #eff1f5;
+        border-radius: 4px;
+        resize: vertical;
+        font-size: medium;
+        }
+        input[type=submit] {
+            background-color: #505652;
+            height: 40px;
+            width: 80px;
+            border: none;
+            color: #ffffff;
+            font-weight: 700;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+            font-size: medium;
+            margin: 5px;
+        }
+        input[type=submit]:hover {
+            background-color: #777A75;
+            color: #ffffff;
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <label for="api">API</label>
+                </div>
+                <div class="col-7">
+                    <input type="text" id="api" name="api" placeholder="API....">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <label for="interval">INTERVAL</label>
+                </div>
+                <div class="col-7">
+                    <input type="text" id="interval" name="interval" placeholder="Interval">
+                </div>
+            </div>
+            <div class="row">
+                <input type="submit" class="main_button" value="Submit">
+            </div>
+        </div>
+         
+    </form>
+</body>
+</html>
