@@ -20,18 +20,20 @@
             box-sizing: border-box;
         }
         body{
-            color: #333140;
+            background: #009578;
+            color: black;
         }
         h1{
             font-size: 50px;
             text-align: center;
         }
         .container {
-        border-radius: 0px;
-        background-color: #c4c7c2;
-        padding: 3px 20px 70px 20px;
-        margin: 1.5%;
-        font-size: larger;
+            border: 1px solid #ffffff;
+            border-radius: 10px;
+            background-color: #ffffff;
+            padding: 3px 20px 70px 20px;
+            margin: 1.5%;
+            font-size: larger;
         }
         .row{
         margin-top: 20px;
@@ -48,44 +50,51 @@
             font-weight: 600;
         }
         input[type=text] {
+        background-color: #ffffff;
+        border-style: none;
+        border-bottom:1.5px solid #009578; 
         width: 100%;
         padding: 12px;
-        border: 1px solid #eff1f5;
-        border-radius: 4px;
         resize: vertical;
         font-size: medium;
+        }
+        input[type=text]:hover{
+            border-style: none;
+            border-bottom:3px solid #009578; 
+        }
+        input[type=text]:focus-visible{
+            outline: none;
+            border-bottom: 3px solid #009578;
         }
         table{
             width: 100%;
             padding: 5px;
-            background-color: gray;
         }
         .table_head{
-            background-color: #081c15;
+            background-color: #009578;
             color: #ffffff;
             font-size: x-large;
-            font-weight: 700;
+            font-weight: 500;
         }
         th{
             padding: 8px;
         }
         input[type=submit] {
-            background-color: #2D6A4F;
+            background: #009578;
+            color: #ffffff;
             height: 40px;
             width: 80px;
             border: none;
-            color: #ffffff;
-            font-weight: 700;
+            font-weight: 500;
             border-radius: 4px;
             cursor: pointer;
             float: right;
-            font-size: medium;
+            font-size: large;
             margin: 5px;
         }
         input[type=submit]:hover {
-            background-color: #1B4332;
-            color: #ffffff;
-            font-size: medium;
+            background-color: #009578;
+            font-size: large;
         }
     </style>
 </head>

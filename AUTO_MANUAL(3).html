@@ -19,9 +19,12 @@
         *{
             box-sizing: border-box;
         }
+        body{
+          background: #009578;
+        }
          .container {
         border-radius: 0px;
-        background-color: #c4c7c2;
+        background-color: #ffffff;
         padding: 10px 20px 70px 20px;
         margin: 1.5%;
         font-size: larger;
@@ -29,7 +32,7 @@
         .tab {
         margin: 1.5%;
         overflow: hidden;
-        background-color: #081c15;
+        background-color: #009578;
         color: #ffffff;
         }
         .tablinks {
@@ -40,19 +43,17 @@
             padding: 15px 16px;
             transition: 0.3s;
             font-size: 17px;
-            font-weight: 600;
+            font-weight: 500;
             border-style: none;
         }
         .tablinks:hover {
-            border-bottom: 3px solid #373d3e;
+            border-bottom: 3px solid #ffffff;
             color: #ffffff;
-            font-weight: 600;
-            background-color: #1b4332;
+            font-weight: 500;
         }
         .tablinks.active {
-            color: #333140;
-            border-bottom: 5px solid #373d3e;
-            font-weight: 700;
+            border-bottom: 5px solid #ffffff;
+            font-weight: 500;
         }
         .row{
         margin-top: 20px;
@@ -70,20 +71,37 @@
         }
         input[type=text],
         input[type=number] {
+        background-color: #ffffff;
+        border-style: none;
+        border-bottom:1.5px solid #009578; 
         width: 100%;
         padding: 12px;
-        border: 1px solid #eff1f5;
-        border-radius: 4px;
         resize: vertical;
         font-size: medium;
         }
+        input[type=text]:hover{
+            border-style: none;
+            border-bottom:3px solid #009578; 
+        }
+        input[type=text]:focus-visible{
+            outline: none;
+            border-bottom: 3px solid #009578;
+        }
+        input[type=number]:hover{
+            border-style: none;
+            border-bottom:3px solid #009578; 
+        } 
+        input[type=number]:focus-visible{
+            outline: none;
+            border-bottom: 3px solid #009578;
+        }
         input[type=submit] {
-            background-color: #2D6A4F;
+            background-color: #009578;
             height: 40px;
             width: 80px;
             border: none;
             color: #ffffff;
-            font-weight: 700;
+            font-weight: 500;
             border-radius: 4px;
             cursor: pointer;
             float: right;
@@ -91,7 +109,7 @@
             margin: 5px;
         }
         input[type=submit]:hover {
-            background-color: #1B4332;
+            background-color: #009578;
             color: #ffffff;
             font-size: medium;
         }

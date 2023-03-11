@@ -18,9 +18,12 @@
         *{
             box-sizing: border-box;
         }
+        body{
+          background: #009578;
+        }
         .container {
         border-radius: 0px;
-        background-color: #c4c7c2;
+        background: #ffffff;
         padding: 10px 20px 70px 20px;
         margin: 1.5%;
         font-size: larger;
@@ -40,20 +43,29 @@
             font-weight: 600;
         }
         input[type=text] {
+        background-color: #ffffff;
+        border-style: none;
+        border-bottom:1.5px solid #009578; 
         width: 100%;
         padding: 12px;
-        border: 1px solid #eff1f5;
-        border-radius: 4px;
         resize: vertical;
         font-size: medium;
         }
+        input[type=text]:hover{
+            border-style: none;
+            border-bottom:3px solid #009578; 
+        }
+        input[type=text]:focus-visible{
+            outline: none;
+            border-bottom: 3px solid #009578;
+        }
         input[type=submit] {
-            background-color: #2D6A4F;
+            background-color: #009578;
             height: 40px;
             width: 80px;
             border: none;
             color: #ffffff;
-            font-weight: 700;
+            font-weight: 500;
             border-radius: 4px;
             cursor: pointer;
             float: right;
@@ -61,7 +73,7 @@
             margin: 5px;
         }
         input[type=submit]:hover {
-            background-color: #1B4332;
+            background-color: #009578;
             color: #ffffff;
             font-size: medium;
         }
