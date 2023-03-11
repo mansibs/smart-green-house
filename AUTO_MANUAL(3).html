@@ -22,15 +22,15 @@
          .container {
         border-radius: 0px;
         background-color: #c4c7c2;
-        padding: 20px;
+        padding: 10px 20px 70px 20px;
         margin: 1.5%;
         font-size: larger;
         }
         .tab {
         margin: 1.5%;
         overflow: hidden;
-        background-color: #505652;
-        color: #333140;
+        background-color: #081c15;
+        color: #ffffff;
         }
         .tablinks {
             background-color: inherit;
@@ -45,9 +45,9 @@
         }
         .tablinks:hover {
             border-bottom: 3px solid #373d3e;
-            color: #333140;
+            color: #ffffff;
             font-weight: 600;
-            background-color: #ffffff;
+            background-color: #1b4332;
         }
         .tablinks.active {
             color: #333140;
@@ -65,6 +65,9 @@
         width: 100%;
         margin-top: 6px;
         }
+        label{
+          font-weight: 600;
+        }
         input[type=text],
         input[type=number] {
         width: 100%;
@@ -75,7 +78,7 @@
         font-size: medium;
         }
         input[type=submit] {
-            background-color: #505652;
+            background-color: #2D6A4F;
             height: 40px;
             width: 80px;
             border: none;
@@ -88,7 +91,7 @@
             margin: 5px;
         }
         input[type=submit]:hover {
-            background-color: #777A75;
+            background-color: #1B4332;
             color: #ffffff;
             font-size: medium;
         }
@@ -153,6 +156,22 @@
                     </div>  
                 </div>
     </form>
+
+    <script>
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+    </script>
     
 </body>
 </html>
