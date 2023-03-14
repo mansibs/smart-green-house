@@ -48,15 +48,18 @@
             border-style: none;
         }
         .tablinks:hover {
-          background-color: #243952;
+          background-color: #1e3249;
           border-radius: 15px;
             color: #ffffff;
             font-weight: 500;
         }
         .tablinks.active {
-          background-color: #778DA9;
+          background-color: #1e3249;
           border-radius: 15px;
             font-weight: 500;
+        }
+        .tabcontent{
+          display: none;
         }
         .row{
         margin-top: 20px;
@@ -117,13 +120,14 @@
             color: #ffffff;
             font-size: large;
         }
+        
     </style>
 </head>
 <body>
     <form>
             <div class="tab">
-                <button class="tablinks" onclick="openCity(event, 'Auto')">Auto  Settings</button>
-                <button class="tablinks" onclick="openCity(event, 'Ethernet')">Manual Settings</button>
+                <button class="tablinks" type="button" onclick="showTab('auto','manual')">Auto  Settings</button>
+                <button class="tablinks"  type="button" onclick="showTab('manual', 'auto')">Manual Settings</button>
             </div>
             
             <div id="auto" class="tabcontent">
