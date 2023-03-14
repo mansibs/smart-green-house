@@ -9,8 +9,11 @@
          @media screen and (max-width: 600px) {
             .col-4,
             .col-7,
+            input[type=text],
+        input[type=number],
             input[type=submit],
             table,
+            label,
             .container-table {
             width: 98%;
             margin-top: 0;
@@ -20,16 +23,17 @@
             box-sizing: border-box;
         }
          .container {
-        border-radius: 0px;
-        background-color: #ffffff;
+        border-radius: 15px;
+        background: #778DA9;
         padding: 10px 20px 70px 20px;
         margin: 1.5%;
         font-size: larger;
         }
         .tab {
         margin: 1.5%;
+        border-radius: 15px;
         overflow: hidden;
-        background-color: #009578;
+        background-color: #415A77;
         color: #ffffff;
         }
         .tablinks {
@@ -44,12 +48,14 @@
             border-style: none;
         }
         .tablinks:hover {
-            border-bottom: 3px solid #ffffff;
+          background-color: #243952;
+          border-radius: 15px;
             color: #ffffff;
             font-weight: 500;
         }
         .tablinks.active {
-            border-bottom: 5px solid #ffffff;
+          background-color: #778DA9;
+          border-radius: 15px;
             font-weight: 500;
         }
         .row{
@@ -64,13 +70,14 @@
         margin-top: 6px;
         }
         label{
+          font-size: larger;
           font-weight: 600;
         }
         input[type=text],
         input[type=number] {
-        background-color: #EFD9CE;
+        background-color: #ffffff;
         border-style: none;
-        border-bottom:1.5px solid #; 
+        border-bottom:1.5px solid #415A77; 
         width: 100%;
         padding: 12px;
         resize: vertical;
@@ -78,43 +85,42 @@
         }
         input[type=text]:hover{
             border-style: none;
-            border-bottom:3px solid red; 
+            border-bottom:3px solid #415A77; 
         }
         input[type=text]:focus-visible{
             outline: none;
-            border-bottom: 3px solid red;
+            border-bottom: 3px solid #415A77;
         }
         input[type=number]:hover{
             border-style: none;
-            border-bottom:3px solid red; 
+            border-bottom:3px solid #415A77; 
         } 
         input[type=number]:focus-visible{
             outline: none;
-            border-bottom: 3px solid red;
+            border-bottom: 3px solid #415A77;
         }
         input[type=submit] {
-            background-color: ##eb8556;
+            background-color: #eb8556;
             height: 40px;
             width: 80px;
             border: none;
             color: #ffffff;
             font-weight: 500;
-            border-radius: 4px;
+            border-radius: 5px;
             cursor: pointer;
             float: right;
-            font-size: medium;
+            font-size: large;
             margin: 5px;
         }
         input[type=submit]:hover {
             background-color: #e9723b;
             color: #ffffff;
-            font-size: medium;
+            font-size: large;
         }
     </style>
 </head>
 <body>
     <form>
-
             <div class="tab">
                 <button class="tablinks" onclick="openCity(event, 'Auto')">Auto  Settings</button>
                 <button class="tablinks" onclick="openCity(event, 'Ethernet')">Manual Settings</button>
@@ -125,7 +131,7 @@
                   <form method='get' action=''>
                     <div class="row">
                       <div class="col-4">
-                        <label for="on-time">ON Time :</label>
+                        <label for="on-time">ON Time:</label>
                       </div>
                       <div class="col-7">
                         <input type="text" id="on-time" name="on-time" placeholder="ON Time....">
@@ -133,7 +139,7 @@
                     </div>
                     <div class="row">
                       <div class="col-4">
-                        <label for="off-time">OFF Time :</label>
+                        <label for="off-time">OFF Time:</label>
                       </div>
                       <div class="col-7">
                         <input type="text" id="off-time" name="Password" placeholder="OFF Time">
@@ -150,7 +156,7 @@
                       <form method='get' action=''>
                         <div class="row">
                           <div class="col-4">
-                            <label for="sensor-1">Sensor 1 :</label>
+                            <label for="sensor-1">Sensor 1:</label>
                           </div>
                           <div class="col-7">
                             <input type="number" id="sensor_1" name="sensor 1" placeholder="Sensor 1....">
@@ -158,7 +164,7 @@
                         </div>
                         <div class="row">
                           <div class="col-4">
-                            <label for="sensor-2">Sensor 2 :</label>
+                            <label for="sensor-2">Sensor 2:</label>
                           </div>
                           <div class="col-7">
                             <input type="number" id="sensor_2" name="Password" placeholder="Sensor 2....">
@@ -173,6 +179,12 @@
     </form>
 
     <script>
+      function showTab(tabtoshow, tabtohide){
+        tabcontent = document.getElementById(tabtoshow)
+        tabcontenttohide = document.getElementById(tabtohide)
+        tabcontent.style.display = "block";
+        tabcontenttohide.style.display = "none";
+      }
       function openCity(evt, cityName) {
         var i, tabcontent, tablinks;
         tabcontent = document.getElementsByClassName("tabcontent");

@@ -6,30 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DATA</title>
     <style>
+         @media screen and (max-width: 600px) {
+            .col, 
+            input[type=submit],
+            table {
+            width: 70%;
+            margin-top: 0;
+            }
+        }
+            *{
+                box-sizing: border-box;
+            }
         body{
             justify-content: center;
             align-items: center;
             align-content: center;
         }
         h1{
+            color: #415A77;
             font-size: 50px;
             font-weight: 700;
             text-align: center;
         }
         .container{
             background: #778DA9;
-            padding-top: 5px;
+            padding-top: 15px;
             padding-bottom: 70px;
             border-radius: 10px;
         }
-        table{
-            width: 100%;
+        .row{
+            text-align: center;
             margin: auto;
         }
-        td{
+        .col{
+            padding: 5px 30px;
+            margin: 20px;
             font-size: x-large;
-            font-weight: 600;
-            padding: 2vh;
+            display: inline-flex;
+            justify-content: center;
+            background-color: #ffffff;
+            
         }
         button {
             background-color: #eb8556;
@@ -38,52 +54,48 @@
             width: 80px;
             border: none;
             font-weight: 500;
-            border-radius: 4px;
+            border-radius: 5px;
             cursor: pointer;
             float: right;
-            font-size: medium;
+            font-size: large;
             margin: 10px;
         }
         button:hover {
             background-color: #e9723b;
-            font-size: medium;
+            font-size: large;
         }
     </style>
 </head>
 <body>
+        <h1>DATA</h1>
     <div class="container">
         <div class="row">
-            <h1>DATA</h1>
+            <div class="col">
+                <div>Temp. :</div>
+                <div>xxxx</div>
+            </div>
+            <div class="col">
+                <div>Hum. :</div>
+                <div>xxxx</div>
+            </div>
+            <div class="col">
+                <div>Light. :</div>
+                <div>xxxx</div>
+            </div>
+            <div class="col">
+                <div>PH :</div>
+                <div>xxxx</div>
+            </div>
+            <div class="col">
+                <div>TDS :</div>
+                <div>xxxx</div>
+            </div>
         </div>
-            <div class="row">
-                <table>
-                    <tr>
-                        <td>Temp. :</td>
-                        <td>Temp. :</td>
-                    </tr>
-                    <tr>
-                        <td>Hum. :</td>
-                        <td>Hum. :</td>
-                    </tr>
-                    <tr>
-                        <td>Light :</td>
-                        <td>Light :</td>
-                    </tr>
-                    <tr>
-                        <td>PH :</td>
-                        <td>PH :</td>
-                    </tr>
-                    <tr>
-                        <td>TDS :</td>
-                        <td>TDS :</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="row">
-                <a href='/'>
-                    <button type="button" class="refresh" onclick=''>Refresh</button>
-                </a>
-            </div>
+        <div class="row">
+            <a href='/'>
+                <button type="button" class="refresh" onclick=''>Refresh</button>
+            </a>
+        </div>
     </div>
 
 </body>
